@@ -1,5 +1,33 @@
 # notebook-on-docker
 
+# プロジェクトの開き方
+
+1. ターミナルを開く
+
+    iTerm2でターミナルを開き、ディレクトリに移動する
+
+    ```bash
+    cd ~/desktop/test_v3
+    ```
+
+2. プロジェクトをclone
+
+    ```bash
+    git clone https://github.com/k-kawabata/notebook-on-docker.git
+    ```
+
+3. clone直下のディレクトリに移動する
+
+    ```bash
+    cd notebook-on-docker
+    ```
+
+4. VS Code(cursor)で開く
+
+    ```bash
+    code .
+    ```
+
 ## ローカルでの実行例
 
 1. VS Code(cursor) でプロジェクトを開く
@@ -34,3 +62,31 @@
 1. Copilot を有効化
 
     コードセルで Copilot が有効になっていることを確認（設定済みであれば、提案が自動で表示されます）。
+
+# 拡張機能の設定の開き方
+
+1. which python で python のパスを確認
+
+    ```bash
+    which python
+    ```
+
+2. pip list で拡張機能を確認
+
+    ```bash
+    pip list
+    ```
+    numpyがインストールされていることを確認
+
+3. docker内でnumpy をインストール
+
+    ```bash
+    pip install numpy
+    ```
+
+4. ワークスペースでは無効になっているジュピターを有効化する
+
+    VS Code(cursor) の左サイドバーにある 拡張機能 アイコンをクリック。
+    拡張機能の検索窓に jupyte
+    r と入力し、「Jupyter」を選択。
+    「install」をクリック。
