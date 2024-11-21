@@ -22,7 +22,7 @@
     cd notebook-on-docker
     ```
 
-4. VS Code(cursor)で開く
+4. そのディレクトリでVS Code(cursor)で開く
 
     ```bash
     code .
@@ -63,31 +63,26 @@
 
     コードセルで Copilot が有効になっていることを確認（設定済みであれば、提案が自動で表示されます）。
 
-# パッケージ管理の手順
+### pipでパッケージ管理の手順(Dockerfileのrequirements.txtで自動化済み)
 
-1. Pythonのパスを確認
-
-    ```bash
-    which python
-    ```
-
-2. インストールされているパッケージを確認
+1. インストールされているパッケージを確認
 
     ```bash
     pip list
     ```
     numpyがインストールされていることを確認
 
-3. Docker内でnumpyをインストール
+2. Docker内でnumpyをインストール
 
     ```bash
     pip install numpy
     ```
 
-4. ワークスペースで無効になっているJupyterを有効化する
+#### 無効の拡張機能
+
+1. ワークスペースで無効になっているJupyterを有効化する
 
     VS Code(cursor) の左サイドバーにある 拡張機能 アイコンをクリック。
     拡張機能の検索窓に jupyter と入力し、「Jupyter」を選択。
     「install」をクリック。
 
-# 拡張機能については.vscode/extensions.jsonで管理する
