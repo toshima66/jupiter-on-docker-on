@@ -78,7 +78,7 @@
     pip install numpy
     ```
 
-#### 無効の拡張機能
+#### 無効の拡張機能について
 
 1. ワークスペースで無効になっているJupyterを有効化する
 
@@ -86,3 +86,62 @@
     拡張機能の検索窓に jupyter と入力し、「Jupyter」を選択。
     「install」をクリック。
 
+##### Kaggle API キーを使う
+
+1. https://www.kaggle.com/ にアクセスし、右上のアカウントをクリックする
+
+2. settings をクリックする
+
+3. API をクリックする
+
+4. Create New Token をクリックする
+
+5. ダウンロードした json ファイルを .kaggle ディレクトリに配置する
+
+example
+
+```
+./notebook-on-docker/
+├── docker-compose.yml
+├── .kaggle/
+│   └── kaggle.json
+└── notebooks/
+```
+
+6. (optional) ターミナルでkaggle コマンドの確認
+
+sampleはすぐに結果を返します。
+
+    ```bash
+    kaggle competitions list
+    ```
+
+7. テストデータのフォルダを作り、フォルダ名をjane-street-real-time-market-data-forecastingにする
+
+8. jane-street-real-time-market-data-forecastingフォルダ内でターミナルでデータをダウンロードする
+
+sampleデータは60分程度かかります。
+
+```bash
+kaggle competitions download -c jane-street-real-time-market-data-forecasting
+```
+##### zipファイルの解凍方法
+重要:以下はfile,unzipコマンドを使える環境で行う。(仮想環境を立てる前のローカル環境で行う)
+
+1. データを確認する
+
+```bash
+file jane-street-real-time-market-data-forecasting.zip
+```
+期待するreturn
+jane-street-real-time-market-data-forecasting.zip: Zip archive data, at least v4.5 to extract, compression method=deflate
+
+2. データを解凍する
+
+```bash
+unzip jane-street-real-time-market-data-forecasting.zip
+```
+
+3. zipファイルはファイルを削除する。
+
+なお、解凍ファイルはファイルが大きいためgitで管理しない。jane-street-real-time-market-data-forecastingフォルダを.gitignoreに追加した。
