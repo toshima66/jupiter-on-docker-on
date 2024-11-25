@@ -8,3 +8,5 @@
 # Macのキャッシュファイルを無視
 .DS_Store
 
+# hiromichi's cheat-code
+/cheat-code/
