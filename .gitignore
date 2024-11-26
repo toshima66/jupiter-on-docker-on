@@ -1,0 +1,12 @@
+# Kaggle APIキーを含むディレクトリを無視
+/.kaggle/
+
+# 解凍ファイルのディレクトリを無視
+/notebooks/jane-street-real-time-market-data-forecasting/
+
+# 自動生成ファイル
+# Macのキャッシュファイルを無視
+.DS_Store
+
+# hiromichi's cheat-code
+/cheat-code/
