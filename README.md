@@ -1,6 +1,6 @@
 # notebook-on-docker
 
-# ローカルでの実行例
+## ローカルでの実行例
 
 1. VS Code(cursor) でプロジェクトを開く
 
@@ -44,13 +44,13 @@
     ```
     numpyがインストールされていることを確認
 
-2. Docker内でnumpyをインストール
+1. Docker内でnumpyをインストール
 
     ```bash
     pip install numpy
     ```
 
-### 無効の拡張機能
+## 無効の拡張機能
 
 1. ワークスペースで無効になっているJupyterを有効化する
 
