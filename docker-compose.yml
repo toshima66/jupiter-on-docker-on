@@ -1,7 +1,8 @@
-version: "3.9"
 services:
   jupyter:
-    image: jupyter/base-notebook
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: jupyter-notebook
     ports:
       - "8888:8888"
